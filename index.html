@@ -40,8 +40,6 @@
   <!-- أيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <script data-cfasync="false" async type="text/javascript" src="//zs.bayokagrote.com/rQVxABtXz7SvFu/jLLLL"></script>
-  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3QKTBZDQ0"></script>
 <script>
@@ -51,6 +49,21 @@
 
   gtag('config', 'G-W3QKTBZDQ0');
 </script>
+  
+  <!-- كود Adsterra العام -->
+  <script type="text/javascript">
+	  atOptions = {
+		'key' : '76777c251134ef466e379564a354fc51',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	  };
+	</script>
+	<script
+	  type="text/javascript"
+	  src="https://www.highperformanceformat.com/76777c251134ef466e379564a354fc51/invoke.js"
+	></script>
   
   <style>
     :root {
@@ -90,21 +103,24 @@
     /* شاشة التحميل */
     #loader {
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: var(--dark-bg);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
     }
     
     .loader-content {
       text-align: center;
       padding: 30px;
       border-radius: 16px;
-      background: rgba(30, 30, 30, 0.9);
+      background: rgba(30, 30, 30, 0.95);
       box-shadow: var(--shadow);
       border: 2px solid var(--gold-primary);
     }
@@ -256,7 +272,7 @@
     /* المحتوى الرئيسي */
     .main-content {
       max-width: 1200px;
-      margin: -40px auto 30px;
+      margin: 30px auto;
       padding: 0 15px;
       position: relative;
       z-index: 5;
@@ -822,6 +838,138 @@
       animation-duration: 15s;
       animation-delay: -2s;
     }
+    
+    /* أنماط الإعلانات */
+    .ad-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      overflow: hidden;
+      background: rgba(30, 30, 30, 0.5);
+      border-radius: 12px;
+      border: 1px solid #444;
+      position: relative;
+    }
+    
+    .ad-label {
+      text-align: center;
+      font-size: 11px;
+      color: #888;
+      padding: 5px 10px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    
+    .ad-label i {
+      color: var(--gold-primary);
+      font-size: 10px;
+    }
+    
+    .ad-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    /* إعلان 728x90 */
+    .ad-728x90 {
+      width: 728px;
+      height: 90px;
+      max-width: 100%;
+    }
+    
+    /* إعلان 468x60 */
+    .ad-468x60 {
+      width: 468px;
+      height: 60px;
+      max-width: 100%;
+    }
+    
+    /* إعلان 320x50 */
+    .ad-320x50 {
+      width: 320px;
+      height: 50px;
+      max-width: 100%;
+    }
+    
+    /* إعلان 300x250 */
+    .ad-300x250 {
+      width: 300px;
+      height: 250px;
+      max-width: 100%;
+    }
+    
+    /* إعلان 300x600 */
+    .ad-300x600 {
+      width: 300px;
+      height: 600px;
+      max-height: 600px;
+    }
+    
+    /* إعلان 160x600 */
+    .ad-160x600 {
+      width: 160px;
+      height: 600px;
+      max-height: 600px;
+    }
+    
+    /* Native Ad */
+    .native-ad {
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      margin: 20px auto;
+    }
+    
+    /* تصميم متجاوب للإعلانات */
+    @media (max-width: 768px) {
+      .ad-728x90 {
+        width: 100%;
+        height: 90px;
+      }
+      
+      .ad-468x60 {
+        width: 100%;
+        height: 60px;
+      }
+      
+      .ad-300x600,
+      .ad-160x600 {
+        width: 100%;
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .ad-300x250 {
+        width: 100%;
+        height: 250px;
+      }
+      
+      .ad-320x50 {
+        width: 100%;
+        height: 50px;
+      }
+      
+      .native-ad {
+        min-height: 150px;
+      }
+    }
+    
+    /* محاذاة خاصة للإعلانات */
+    .ad-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 
@@ -876,6 +1024,31 @@
     </div>
   </header>
 
+  <!-- إعلان 728x90 - أعلى المحتوى -->
+  <div class="ad-container ad-728x90 ad-center" id="ad-top">
+    <div class="ad-label">
+      <i class="fas fa-ad"></i>
+      <span data-lang="ar">إعلان</span>
+      <span data-lang="en">Ad</span>
+    </div>
+    <div class="ad-content">
+      <!-- كود Adsterra 728x90 -->
+      <script type="text/javascript">
+		  atOptions = {
+			'key' : '8dbd66d9c8499d2272d00fafa40a5982',
+			'format' : 'iframe',
+			'height' : 90,
+			'width' : 728,
+			'params' : {}
+		  };
+		</script>
+		<script
+		  type="text/javascript"
+		  src="https://www.highperformanceformat.com/8dbd66d9c8499d2272d00fafa40a5982/invoke.js"
+		></script>
+    </div>
+  </div>
+
   <!-- المحتوى الرئيسي -->
   <div class="main-content">
     <div class="content-grid">
@@ -901,6 +1074,31 @@
           The premium golden version of YouTube, offering an exceptional experience with advanced features like ad-free viewing, background playback, 4K support, and video downloads!
         </p>
         
+        <!-- إعلان 300x250 داخل البطاقة -->
+        <div class="ad-container ad-300x250 ad-center" id="ad-middle">
+          <div class="ad-label">
+            <i class="fas fa-ad"></i>
+            <span data-lang="ar">إعلان</span>
+            <span data-lang="en">Ad</span>
+          </div>
+          <div class="ad-content">
+            <!-- كود Adsterra 300x250 -->
+            <script type="text/javascript">
+			  atOptions = {
+				'key' : '91fcec20194f0b91e75fe86ae2662f54',
+				'format' : 'iframe',
+				'height' : 250,
+				'width' : 300,
+				'params' : {}
+			  };
+			</script>
+			<script
+			  type="text/javascript"
+			  src="https://www.highperformanceformat.com/91fcec20194f0b91e75fe86ae2662f54/invoke.js"
+			></script>
+          </div>
+        </div>
+        
         <div class="app-meta">
           <div class="meta-item">
             <div class="meta-icon"><i class="fas fa-download"></i></div>
@@ -922,6 +1120,24 @@
             <div class="meta-label" data-lang="en">Virus Free</div>
           </div>
         </div>
+		<div class="ad-label">
+            <i class="fas fa-ad"></i>
+            <span data-lang="ar">إعلان</span>
+            <span data-lang="en">Ad</span>
+          </div>
+		
+		<div class="ad-box ad-mobile">
+		  <script type="text/javascript">
+			atOptions = {
+			  'key' : '76777c251134ef466e379564a354fc51',
+			  'format' : 'iframe',
+			  'height' : 50,
+			  'width' : 320,
+			  'params' : {}
+			};
+		  </script>
+		  <script src="https://www.highperformanceformat.com/76777c251134ef466e379564a354fc51/invoke.js"></script>
+		</div>
         
         <div class="download-box">
           <a href="javascript:void(0);" onclick="startCountdown()" id="fileInfoBox" class="file-box">
@@ -938,8 +1154,6 @@
 
           <div id="countdownBox" class="countdown-box"></div>
 
-          <!-- مكان إضافة رابط التحميل الحقيقي -->
-          <!-- قم بتغيير الرابط أدناه إلى رابط التحميل الخاص بك -->
           <a href="https://dlll.apkm.app/ytgold/17/YouTube_Gold_V17.apk" 
              id="finalDownloadBox" class="download-btn" style="display: none;">
             <i class="fas fa-download"></i>
@@ -953,6 +1167,24 @@
       <div class="features-card">
         <h2 class="section-title" data-lang="ar">الميزات الذهبية</h2>
         <h2 class="section-title" data-lang="en">Gold Features</h2>
+        
+        <!-- إعلان Native -->
+        <div class="ad-container native-ad ad-center" id="ad-native">
+          <div class="ad-label">
+            <i class="fas fa-ad"></i>
+            <span data-lang="ar">إعلان Native</span>
+            <span data-lang="en">Ad Native</span>
+          </div>
+          <div class="ad-content">
+            <!-- كود Adsterra Native -->
+            <script
+			  async="async"
+			  data-cfasync="false"
+			  src="https://pl28273312.effectivegatecpm.com/8bb28a370552fbc397c406099c273ac8/invoke.js"
+			></script>
+			<div id="container-8bb28a370552fbc397c406099c273ac8"></div>
+          </div>
+        </div>
         
         <div class="features-grid">
           <div class="feature-item">
@@ -1017,6 +1249,31 @@
         </div>
       </div>
     </div>
+    
+    <!-- إعلان 468x60 تحت المحتوى -->
+    <div class="ad-container ad-468x60 ad-center" id="ad-bottom">
+      <div class="ad-label">
+        <i class="fas fa-ad"></i>
+        <span data-lang="ar">إعلان</span>
+        <span data-lang="en">Ad</span>
+      </div>
+      <div class="ad-content">
+        <!-- كود Adsterra 468x60 -->
+        <script type="text/javascript">
+		  atOptions = {
+			'key' : 'b177c801d8a1b9a772a072809c148ada',
+			'format' : 'iframe',
+			'height' : 60,
+			'width' : 468,
+			'params' : {}
+		  };
+		</script>
+		<script
+		  type="text/javascript"
+		  src="https://www.highperformanceformat.com/b177c801d8a1b9a772a072809c148ada/invoke.js"
+		></script>
+      </div>
+    </div>
   </div>
 
   <!-- الفوتر -->
@@ -1050,6 +1307,31 @@
         <h3 class="footer-section-title" data-lang="ar">روابط مفيدة</h3>
         <h3 class="footer-section-title" data-lang="en">Useful Links</h3>
         
+        <!-- إعلان 320x50 للجوال في الفوتر -->
+        <div class="ad-container ad-320x50 ad-center" id="ad-footer">
+          <div class="ad-label">
+            <i class="fas fa-ad"></i>
+            <span data-lang="ar">إعلان</span>
+            <span data-lang="en">Ad</span>
+          </div>
+          <div class="ad-content">
+            <!-- كود Adsterra 320x50 -->
+            <script type="text/javascript">
+			  atOptions = {
+				'key' : '76777c251134ef466e379564a354fc51',
+				'format' : 'iframe',
+				'height' : 50,
+				'width' : 320,
+				'params' : {}
+			  };
+			</script>
+			<script
+			  type="text/javascript"
+			  src="https://www.highperformanceformat.com/76777c251134ef466e379564a354fc51/invoke.js"
+			></script>
+          </div>
+        </div>
+        
         <div class="footer-links">
           <a href="javascript:void(0);"><i class="fab fa-telegram"></i> <span data-lang="ar">قناة التليجرام</span><span data-lang="en">Telegram Channel</span></a>
           <a href="javascript:void(0);"><i class="fab fa-youtube"></i> <span data-lang="ar">دليل الاستخدام</span><span data-lang="en">User Guide</span></a>
@@ -1073,20 +1355,31 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // محاكاة تقدم التحميل
-      let progress = 0;
-      const progressBar = document.getElementById('loaderBar');
-      const progressInterval = setInterval(() => {
-        progress += Math.random() * 10;
-        progressBar.style.width = `${progress}%`;
-        
-        if (progress >= 100) {
-          clearInterval(progressInterval);
-          document.getElementById('loader').style.opacity = '0';
-          setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
+    // شاشة التحميل بسيطة وفعالة
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loader = document.getElementById('loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          setTimeout(function() {
+            loader.style.display = 'none';
           }, 500);
+        }
+      }, 1000);
+    });
+
+    // البدء فوراً بمحاكاة التحميل
+    document.addEventListener('DOMContentLoaded', function() {
+      const loaderBar = document.getElementById('loaderBar');
+      let progress = 0;
+      
+      const interval = setInterval(function() {
+        progress += Math.random() * 15;
+        if (loaderBar) {
+          loaderBar.style.width = progress + '%';
+        }
+        if (progress >= 100) {
+          clearInterval(interval);
         }
       }, 100);
       
@@ -1107,7 +1400,7 @@
 
     function startCountdown() {
       document.getElementById("fileInfoBox").style.display = "none";
-      var counter = 6;
+      var counter = 5;
       var countdownBox = document.getElementById("countdownBox");
       var finalBtn = document.getElementById("finalDownloadBox");
 
@@ -1122,13 +1415,27 @@
           ? `<i class="fas fa-spinner fa-spin"></i> جاري التحضير للتنزيل... ${counter}`
           : `<i class="fas fa-spinner fa-spin"></i> Preparing download... ${counter}`;
 
-        if (counter === 0) {
+        if (counter <= 0) {
           clearInterval(interval);
           countdownBox.style.display = "none";
           finalBtn.style.display = "flex";
+          
+          // تمرير سلس للزر الجديد
+          finalBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, 1000);
     }
+    
+    // خطأ استرجاع لشاشة التحميل
+    setTimeout(function() {
+      const loader = document.getElementById('loader');
+      if (loader && loader.style.display !== 'none') {
+        loader.style.opacity = '0';
+        setTimeout(function() {
+          loader.style.display = 'none';
+        }, 500);
+      }
+    }, 3000);
   </script>
 </body>
 </html>
